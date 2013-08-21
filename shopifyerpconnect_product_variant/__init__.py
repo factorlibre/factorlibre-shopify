@@ -1,0 +1,2 @@
+import shopify_core
+import product

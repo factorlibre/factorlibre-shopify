@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="shopify_external_referential_view" model="ir.ui.view">
+            <field name="name">shopify.external.referential.form</field>
+            <field name="model">external.referential</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base_external_referentials.external_referential_form_view"/>
+            <field name="priority" eval="20"/>
+            <field name="arch" type="xml">
+                <group name="compulsory" position="after">
+                    <group name="shopify" col="4" colspan="4" attrs="{'invisible': [['type_name', '!=', 'Shopify']]}">
+                        <button name="import_categories" string="1 - Import Product Categories" 
+                            colspan="2" type="object" />
+                        <button name="import_products" string="2 - Import Products"
+                            colspan="2" type="object"/>
+                        <button name="import_customers" string="3 - Import Customers"
+                            colspan="2" type="object"/>
+                    </group>
+                </group>
+            </field>
+        </record>
+
+        <record id="act_shopify_instances_form" model="ir.actions.act_window">
+            <field name="name">Shopify Instances</field>
+            <field name="res_model">external.referential</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="base_external_referentials.external_referential_tree_view" />
+            <field name="domain">[['type_name', '=', 'Shopify']]</field>
+        </record>
+
+        <record id="act_shopify_shop_form" model="ir.actions.act_window">
+            <field name="name">Shopify Shops</field>
+            <field name="res_model">sale.shop</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[['type_name', '=', 'Shopify']]</field>
+        </record>
+
+        <menuitem id="shopify_menu_root" name="Shopify Connection"
+            icon="terp-sale"/>
+        <menuitem id="menu_shopify_core" name="Core Settings" parent="shopify_menu_root" />
+        <menuitem id="menu_shopify_core_instances" name="Shopify Instances" 
+            parent="menu_shopify_core" action="act_shopify_instances_form" />
+        <menuitem id="menu_shopify_core_shops" name="Shopify Shops" 
+            parent="menu_shopify_core" action="act_shopify_shop_form" />
+    </data>
+</openerp>

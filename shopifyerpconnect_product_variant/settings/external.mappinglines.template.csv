@@ -1,0 +1,20 @@
+"id","mapping_id:id","sequence","type","evaluation_type","field_id:id","external_field","external_type","datetime_format","function_name","in_function","out_function","child_mapping_id:id","alternative_key"
+"shopifyerpconnect_product_variant.shopify1_product_product_weight","shopifyerpconnect.shopify1_product_product",0,"in","function",,,"unicode",,"weight","weight_grams = resource.get('grams', 0.0)
+try:
+    result=[('weight',float(weight_grams) / 1000.0)]
+except:
+    result = []",,,"False"
+"shopifyerpconnect.shopify1_product_product_Sku","shopifyerpconnect.shopify1_product_product",0,"in_out","direct","product.field_product_product_default_code","sku","unicode",,"Sku",,,,"False"
+"shopifyerpconnect.shopify1_product_product_price","shopifyerpconnect.shopify1_product_product",0,"in_out","direct","product.field_product_template_list_price","price","unicode",,"price",,,,"False"
+"shopify1_product_product_product_id","shopifyerpconnect.shopify1_product_product",0,"in_out","direct","product.field_product_product_product_tmpl_id","product_id","int",,,,,,"False"
+"shopify1_product_product_title","shopifyerpconnect.shopify1_product_product",0,"in_out","direct","product.field_product_product_variants","title","unicode",,,,,,"False"
+"shopify1_product_template_body_html","shopify1_product_template",0,"in_out","direct","product.field_product_template_description_sale","body_html","unicode",,,,,,"False"
+"shopify1_product_template_is_multi_variants","shopify1_product_template",0,"in","function",,,"unicode",,"is_multi_variants","result=[('is_multi_variants',True)]",,,"False"
+"shopify1_product_template_title","shopify1_product_template",0,"in_out","direct","product.field_product_template_name","title","unicode",,,,,,"False"
+"shopify1_product_variant_dimension_type_name","shopify1_product_variant_dimension_type",0,"in","direct","product_variant_multi.field_product_variant_dimension_type_name","name","unicode",,,,,,"False"
+"shopify1_product_variant_dimension_type_position","shopify1_product_variant_dimension_type",0,"in","direct","product_variant_multi.field_product_variant_dimension_type_sequence","position","int",,,,,,"False"
+"shopifyerpconnect.shopify1_sale_order_line_product_id","shopifyerpconnect.shopify1_sale_order_line",0,"in","function",,,"int",,"product_id","tmpl_pool = self.pool.get('product.template')
+product_pool = self.pool.get('product.product')
+tmpl_pool.get_or_create_oeid(cr, uid, external_session, resource.get('product_id'), context=context)
+variant_id = product_pool.get_or_create_oeid(cr, uid, external_session, resource.get('variant_id'), context=context)
+result = [('product_id',variant_id)]",,,"False"

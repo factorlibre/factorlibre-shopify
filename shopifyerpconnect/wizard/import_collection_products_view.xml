@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="import_collection_products_view" model="ir.ui.view">
+            <field name="name">import.collection.products.form</field>
+            <field name="model">import.collection.products</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Import Collection Products">
+                    <field name="referential_id" colspan="4"/>
+                    <separator string="Collections" colspan="4"/>
+                    <field name="product_category_ids" colspan="4"
+                        nolabel="1"/>
+                    <button name="import_products" colspan="4"
+                        string="Import" type="object"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="import_collection_products_action" model="ir.actions.act_window">
+            <field name="name">Import Collection Products</field>
+            <field name="res_model">import.collection.products</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="import_collection_products_menu" 
+            action="import_collection_products_action" parent="shopifyerpconnect.shopify_menu_root" sequence="15"/>
+    </data>
+</openerp>

@@ -1,0 +1,198 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#   * shopifyerpconnect
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-03 08:48+0000\n"
+"PO-Revision-Date: 2013-07-03 08:48+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: shopifyerpconnect
+#: sql_constraint:sale.order:0
+msgid "Order Reference must be unique per Company!"
+msgstr "La referencia del pedido debe ser única por compañía!"
+
+#. module: shopifyerpconnect
+#: code:addons/shopifyerpconnect/shopify_osv.py:48
+#, python-format
+msgid "There is not list method for the mapping %s"
+msgstr "No existe metodo de listado para el mapeo %s"
+
+#. module: shopifyerpconnect
+#: code:addons/shopifyerpconnect/sale.py:238
+#: code:addons/shopifyerpconnect/sale.py:281
+#, python-format
+msgid "Error"
+msgstr "Error"
+
+#. module: shopifyerpconnect
+#: view:external.referential:0
+msgid "2 - Import Products"
+msgstr "2 - Importar Productos"
+
+#. module: shopifyerpconnect
+#: view:import.collection.products:0
+msgid "Collections"
+msgstr "Colecciones"
+
+#. module: shopifyerpconnect
+#: code:addons/shopifyerpconnect/shopify_osv.py:77
+#, python-format
+msgid "There is no \"Get Method\" configured on the mapping %s"
+msgstr "No existe \"método GET\" configurado en el mapeo %s"
+
+#. module: shopifyerpconnect
+#: view:import.collection.products:0
+msgid "Import"
+msgstr "Importar"
+
+#. module: shopifyerpconnect
+#: view:sale.shop:0
+msgid "Shopify Actions"
+msgstr "Acciones Shopify"
+
+#. module: shopifyerpconnect
+#: model:ir.actions.act_window,name:shopifyerpconnect.act_shopify_instances_form
+#: model:ir.ui.menu,name:shopifyerpconnect.menu_shopify_core_instances
+msgid "Shopify Instances"
+msgstr "Instancias Shopify"
+
+#. module: shopifyerpconnect
+#: model:ir.actions.act_window,name:shopifyerpconnect.act_shopify_shop_form
+#: model:ir.ui.menu,name:shopifyerpconnect.menu_shopify_core_shops
+msgid "Shopify Shops"
+msgstr "Tiendas Shopify"
+
+#. module: shopifyerpconnect
+#: view:import.collection.products:0
+#: model:ir.actions.act_window,name:shopifyerpconnect.import_collection_products_action
+#: model:ir.ui.menu,name:shopifyerpconnect.import_collection_products_menu
+msgid "Import Collection Products"
+msgstr "Importar productos de una colección"
+
+#. module: shopifyerpconnect
+#: code:addons/shopifyerpconnect/shopify_osv.py:139
+#, python-format
+msgid "Calling URL: %s Method:%s"
+msgstr "Llamando URL: %s Método:%s"
+
+#. module: shopifyerpconnect
+#: model:ir.ui.menu,name:shopifyerpconnect.shopify_menu_root
+msgid "Shopify Connection"
+msgstr "Conexión Shopify"
+
+#. module: shopifyerpconnect
+#: view:sale.shop:0
+msgid "External Shop Settings"
+msgstr "Configuración tienda externa"
+
+#. module: shopifyerpconnect
+#: code:addons/shopifyerpconnect/shopify_osv.py:48
+#: code:addons/shopifyerpconnect/shopify_osv.py:76
+#, python-format
+msgid "User Error"
+msgstr "Error de usuario"
+
+#. module: shopifyerpconnect
+#: model:ir.model,name:shopifyerpconnect.model_sale_shop
+msgid "Sales Shop"
+msgstr "Tienda ventas"
+
+#. module: shopifyerpconnect
+#: view:external.referential:0
+msgid "3 - Import Customers"
+msgstr "3 - Importar Clientes"
+
+#. module: shopifyerpconnect
+#: code:addons/shopifyerpconnect/shopify_osv.py:145
+#, python-format
+msgid "Webservice Failure, sleeping %s second before next attempt"
+msgstr "Fallo en Webservice, esperando %s segundos hasta el siguiente intento"
+
+#. module: shopifyerpconnect
+#: model:ir.ui.menu,name:shopifyerpconnect.menu_shopify_core
+msgid "Core Settings"
+msgstr "Configuración de núcleo"
+
+#. module: shopifyerpconnect
+#: field:import.collection.products,product_category_ids:0
+#: model:ir.model.fields,field_description:shopifyerpconnect.field_import_collection_products_product_category_ids
+msgid "Categories"
+msgstr "Categorías"
+
+#. module: shopifyerpconnect
+#: view:external.referential:0
+msgid "1 - Import Product Categories"
+msgstr "1 - Importar Categorías de Producto"
+
+#. module: shopifyerpconnect
+#: model:ir.model,name:shopifyerpconnect.model_external_referential
+msgid "External Referential"
+msgstr "Referencia externa"
+
+#. module: shopifyerpconnect
+#: view:sale.shop:0
+msgid "Import Orders"
+msgstr "Importar pedidos"
+
+#. module: shopifyerpconnect
+#: code:addons/shopifyerpconnect/shopify_osv.py:144
+#, python-format
+msgid "Calling URL: %s Method:%s, Error: %s"
+msgstr "Llamando a la URL: %s Método:%s, Error: %s"
+
+#. module: shopifyerpconnect
+#: code:addons/shopifyerpconnect/sale.py:238
+#: code:addons/shopifyerpconnect/sale.py:281
+#, python-format
+msgid "No tax id found for the rate %s with the tax include = %s"
+msgstr "No existe una id de impuesto para el valor %s con los impuestos incluidos = %s"
+
+#. module: shopifyerpconnect
+#: constraint:external.referential:0
+msgid "The name cannot contain a dot!"
+msgstr "El nombre no puede contener puntos!"
+
+#. module: shopifyerpconnect
+#: sql_constraint:external.referential:0
+msgid "Referential names must be unique !"
+msgstr "Los nombres de las referencias deben ser únicos!"
+
+#. module: shopifyerpconnect
+#: field:import.collection.products,referential_id:0
+#: model:ir.model.fields,field_description:shopifyerpconnect.field_import_collection_products_referential_id
+msgid "Ext. Ref"
+msgstr "Ext. Ref"
+
+#. module: shopifyerpconnect
+#: model:ir.model,name:shopifyerpconnect.model_import_collection_products
+msgid "import.collection.products"
+msgstr "import.collection.products"
+
+#. module: shopifyerpconnect
+#: model:ir.model,name:shopifyerpconnect.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: shopifyerpconnect
+#: model:ir.model,name:shopifyerpconnect.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: shopifyerpconnect
+#: view:sale.shop:0
+msgid "Orders"
+msgstr "Pedidos"
+
+#. module: shopifyerpconnect
+#: model:ir.model,name:shopifyerpconnect.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea pedido de venta"

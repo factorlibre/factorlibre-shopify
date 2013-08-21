@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="shopify_view_shop_form">
+            <field name="name">sale.shop.shopify.form</field>
+            <field name="model">sale.shop</field>
+            <field name="inherit_id"
+                ref="base_sale_multichannels.base_sale_multichannels_view_shop_form" />
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="referential_id" position="replace">
+                    <field name="referential_id" 
+                        attrs="{'readonly': [('type_name', '=', 'Shopify')]}"/>
+                </field>
+                <page string="External Shop Settings" position="before">
+                    <page string="Shopify Actions" 
+                        attrs="{'invisible': [('type_name', '!=', 'Shopify')]}">                     
+                        <group col="4" colspan="4">
+                            <separator string="Orders" colspan="4"/>
+                            <group col="4" colspan="4">
+                                <button name="import_orders" string="Import Orders" colspan="2" type="object"/>                                
+                                <field name="import_orders_from_date" colspan="2"/>
+                            </group>                           
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+    </data>
+</openerp>

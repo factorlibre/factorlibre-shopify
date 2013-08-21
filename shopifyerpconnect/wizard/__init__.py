@@ -1,0 +1,1 @@
+import import_collection_products

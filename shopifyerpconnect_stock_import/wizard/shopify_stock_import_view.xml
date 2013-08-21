@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="shopify_stock_import_view" model="ir.ui.view">
+            <field name="name">shopify.stock.import.form</field>
+            <field name="model">shopify.stock.import</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Shopify Stock Import">
+                    <field name="product_ids" colspan="4"
+                        nolabel="1"/>
+                    <button colspan="4" string="Import Stock"
+                        type="object" name="import_product_stocks"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="shopify_stock_import_action" model="ir.actions.act_window">
+            <field name="name">Shopify: Import Stock</field>
+            <field name="res_model">shopify.stock.import</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="ir_action_shopify_stock_import" model="ir.values">
+            <field name="key2">client_action_multi</field>
+            <field name="model">sale.shop</field>
+            <field name="name">Shopify: Import Stock</field>
+            <field name="value" eval="'ir.actions.act_window,%d'%shopify_stock_import_action"/>
+            <field name="object" eval="True"/>
+        </record>
+    </data>
+</openerp>
